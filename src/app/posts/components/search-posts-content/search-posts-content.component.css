@@ -1,0 +1,28 @@
+.container-search{
+  display: flex;
+  justify-content: center;
+}
+
+.form-content{
+  width: 50%;
+  min-width:25rem;
+  justify-content: center;
+  overflow: hidden;
+  padding-top:30px;
+}
+
+.search-wrapper {
+  display: flex;
+  align-content: center;
+}
+
+.search-icon {
+  margin-right: 8px;
+}
+
+
+
+
+
+
+

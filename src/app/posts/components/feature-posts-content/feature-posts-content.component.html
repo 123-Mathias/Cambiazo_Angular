@@ -1,0 +1,22 @@
+
+<div class="container-slider">
+<div class="container-cards" *ngFor="let i of [1,2]">
+  <mat-card *ngFor="let item of items" >
+    <div class="image" [style.background-image]="'url(https://material.angular.io/assets/img/examples/shiba' + item + '.jpg)'">
+    </div>
+    <div class="info-card">
+      <p class="location">Ubicacion</p>
+      <mat-card-header>
+        <mat-card-title>objetos</mat-card-title>
+        <mat-card-subtitle>
+          <button>Category</button>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+      <p class="p-info">Intercambio por unas</p>
+      <p class="p-price">S/ valor aprox.</p>
+    </mat-card-content>
+    </div>
+  </mat-card>
+</div>
+</div>

@@ -1,0 +1,26 @@
+<h1 class="title-latest-posts">Ultimos Trueques Publicados</h1>
+<div class="container-card">
+  <mat-card class="example-card" *ngFor="let item of items">
+    <div class="container-post-image">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    </div>
+    <h3>Ubicacion</h3>
+    <mat-card-header>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed {{item}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="description">
+        escripcion 2 line
+
+      </p>
+      <hr>
+      <p class="change-object">Change 1 line</p>
+    </mat-card-content>
+
+    <mat-card-footer>
+      S/ valor aprox.
+    </mat-card-footer>
+  </mat-card>
+</div>
+
