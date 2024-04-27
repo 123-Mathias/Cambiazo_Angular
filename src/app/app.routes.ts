@@ -4,6 +4,9 @@ import {PrivacyPolicyComponent} from "./pages/privacy-policy/privacy-policy.comp
 import {HelpComponent} from "./pages/help/help.component";
 import {TermsOfUseComponent} from "./pages/terms-of-use/terms-of-use.component";
 import {ContactComponent} from "./pages/contact/contact.component";
+import {MembershipsComponent} from "./pages/memberships/memberships.component";
+import {DonationsComponent} from "./pages/donations/donations.component";
+import {PostComponent} from "./pages/post/post.component";
 
 export const routes: Routes = [
   {path:'home',component: HomeComponent},
@@ -11,5 +14,10 @@ export const routes: Routes = [
   {path:'help', component: HelpComponent},
   {path:'terms-of-use', component: TermsOfUseComponent},
   {path:'contact', component: ContactComponent},
-  {path:'',pathMatch:'full',redirectTo:'home'}
+  {path:'memberships', component:MembershipsComponent},
+  {path:'donations',component: DonationsComponent},
+  {path:'home/post',component:PostComponent},
+
+  {path:'',pathMatch:'full',redirectTo:'home'},
+  {path:'**',pathMatch:'full',redirectTo:'home'}
 ];

@@ -5,14 +5,14 @@
 
   <nav class="container-nav">
     <ul>
-      <li><a href="#" title="Inicio">Inicio</a></li>
-      <li><a href="#" title="Donaciones">Donaciones</a></li>
-      <li><a href="#" title="Membresías">Membresías</a></li>
+      <li><a routerLink="/home" title="Inicio">Inicio</a></li>
+      <li><a routerLink="/donations" title="Donaciones">Donaciones</a></li>
+      <li><a routerLink="/memberships" title="Membresías">Membresías</a></li>
     </ul>
   </nav>
 
   <div class="container-button">
-  <button class="button-login">Publicar</button>
+  <button class="button-login" (click)="createPost()">Publicar</button>
   <button class="button-register" >Iniciar Sesión</button>
   </div>
 
