@@ -1,0 +1,107 @@
+.container{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+mat-card,mat-cad-actions,mat-card-header,mat-cardtitle,mat-card-subtitle,p{
+  font-family: inherit;
+}
+
+.form-content{
+  width:100%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.search-wrapper {
+  display: flex;
+  align-content: center;
+}
+
+.search-icon {
+  margin-right: 8px;
+}
+
+
+/******************/
+
+mat-card{
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  border:solid 2px rgb(0,0,0,0.1);
+  box-shadow: none;
+  font-family: inherit;
+}
+
+mat-card:not(last-of-type){
+  margin-bottom: 2rem;
+}
+mat-card img{
+  margin: 1rem;
+  height: 5rem;
+  border-radius: 15px;
+}
+
+mat-card-header{
+  display: flex;
+  flex-direction: column;
+  width: 67%;
+  justify-content: center;
+  font-family: inherit;
+}
+
+mat-card-header p{
+  display: none;
+}
+mat-card-subtitle{
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+mat-card-title{
+  line-height: 1.2rem;
+  font-family: inherit;
+  font-weight: bold;
+}
+mat-card-actions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+mat-card-actions button{
+  border-radius: 25px;
+  background-color: #FFD146;
+  width: 100%;
+}
+
+@media (max-width: 500px){
+  mat-card-header{
+    width: 100%;
+    padding-left:0;
+  }
+
+  mat-card-title{
+    font-size: 0.9rem;
+  }
+
+  mat-card-subtitle{
+    font-size: 0.85rem;
+  }
+
+  mat-card img{
+    height: 4rem;
+  }
+
+  mat-card-header p{
+    display: initial;
+    font-size: 0.8rem;
+  }
+
+  mat-card-actions{
+    display: none;
+  }
+
+
+}
