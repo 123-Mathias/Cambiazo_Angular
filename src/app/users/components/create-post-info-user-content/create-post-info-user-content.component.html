@@ -21,25 +21,24 @@
 
     <h3 class="subtitle">Pais</h3>
     <mat-form-field>
-      <mat-select>
-        <mat-option value="one">First option</mat-option>
-        <mat-option value="two">Second option</mat-option>
+      <mat-select [(ngModel)]="selectedCountry" (selectionChange)="onCountrySelectionChange()">
+        <mat-option *ngFor="let country of countries" [value]='country.name'>{{country.name}}</mat-option>
       </mat-select>
     </mat-form-field>
 
-    <h3 class="subtitle">Provincia</h3>
+    <h3 class="subtitle">Estados</h3>
     <mat-form-field>
       <mat-select>
-        <mat-option value="one">First option</mat-option>
-        <mat-option value="two">Second option</mat-option>
+        <mat-option *ngIf="!states || states.length === 0" [value]="null">No hay estados disponibles</mat-option>
+        <mat-option *ngFor="let state of states" [value]='state'>{{state}}</mat-option>
       </mat-select>
     </mat-form-field>
 
-    <h3 class="subtitle">Distrito</h3>
+    <h3 class="subtitle">Ciudades</h3>
     <mat-form-field>
       <mat-select>
-        <mat-option value="one">First option</mat-option>
-        <mat-option value="two">Second option</mat-option>
+        <mat-option *ngIf="!cities || cities.length === 0" [value]="null">No hay ciudades disponibles</mat-option>
+        <mat-option *ngFor="let city of cities" [value]='city'>{{city}}</mat-option>
       </mat-select>
     </mat-form-field>
 

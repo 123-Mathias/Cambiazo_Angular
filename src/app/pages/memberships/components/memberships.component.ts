@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatCardModule} from "@angular/material/card";
 import {NgClass, NgForOf} from "@angular/common";
 import {HttpClient} from "@angular/common/http";
+import {MembershipsService} from "../services/memberships.service";
 
 @Component({
   selector: 'app-memberships',
@@ -18,17 +19,18 @@ export class MembershipsComponent implements OnInit{
 
   items: any[] = []
 
-  constructor(private http:HttpClient){
+  constructor(private membershipsService:MembershipsService) {
   }
 
 
   ngOnInit() {
+    this.getMemberAllMemberships()
+  }
 
-    this.http.get(
-      "https://cambiazodb.github.io/api/memberships.json").subscribe(
+  getMemberAllMemberships() {
+    this.membershipsService.getMemberShips().subscribe(
       (res:any)=> {
         this.items = res
-        console.log(res)
       },error => console.log(error)
     )
   }

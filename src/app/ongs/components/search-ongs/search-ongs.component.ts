@@ -4,8 +4,8 @@ import {MatIcon} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
-import {HttpClient} from "@angular/common/http";
 import {MatButton} from "@angular/material/button";
+import {OngsService} from "../../services/ongs.service";
 
 @Component({
   selector: 'app-search-ongs',
@@ -25,15 +25,13 @@ export class SearchOngsComponent implements OnInit{
 
   items:any[]=[]
 
-  constructor(private http: HttpClient) {
+  constructor(private ongsService:OngsService) {
   }
   ngOnInit() {
 
-    this.http.get(
-      "https://662adbcede35f91de15695c4.mockapi.io/cambiazo/ongs").subscribe(
+    this.ongsService.getOngs().subscribe(
       (res:any)=> {
         this.items = res
-        console.log(res)
       },error => console.log(error)
     )
   }
