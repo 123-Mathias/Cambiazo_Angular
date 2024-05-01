@@ -2,7 +2,7 @@
   <mat-form-field class="form-content">
     <div class="search-wrapper">
       <mat-icon class="search-icon">search</mat-icon>
-      <input matInput placeholder="Buscar..." required class="search-input">
+      <input matInput placeholder="Buscar..." required class="search-input" (input)="searchOngs($event)">
     </div>
   </mat-form-field>
 
