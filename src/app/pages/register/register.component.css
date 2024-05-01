@@ -1,4 +1,4 @@
-.login {
+.register {
   width: 100%;
   height: 100%;
   display: flex;
@@ -10,6 +10,16 @@
   justify-content: center;
 
 }
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.img-logo{
+  width: 80%;
+}
 .button {
   background-color: #FFD146;
   width: 100%;
@@ -17,14 +27,15 @@
   border: none;
   border-radius: 35px;
   cursor: pointer;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .gmail {
   border: 1px solid #C2C2C2;
   width: 100%;
   border-radius: 35px;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 20px;
 }
 .gmail-logo-name{
@@ -90,15 +101,15 @@ main {
   background-color: #C2C2C2;
 }
 .subtitle{
-  padding: 10px;
+  padding: 0 10px 0 10px;
   color: #C2C2C2;
 }
 .title{
   font-size: 30px;
-  margin: 40px 0 20px 0;
+  margin: 25px 0 15px 0;
   font-weight: bold;
 }
-.button-home {
+.button-home{
   position: absolute;
   margin:1rem;
   background-color: #FFD146;
@@ -117,35 +128,45 @@ main {
   align-content: center;
   justify-content: center;
 }
-.register{
+.login{
   font-size: 15px;
   font-weight: bold;
   text-align: center;
 }
-.register a{
+.login a{
   color: #FFD146;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
 }
-.forgot-password{
-  display: flex;
-  justify-content: space-between;
-  font-size: 15px;
-}
-.forgot-password a{
-  color: #FFD146;
-  text-decoration: none;
-  font-size: 13px;
+.accept:checked{
+  background-color: #FFD146;
 }
 .mat-input-element{
   border: 1px solid #C2C2C2;
   width: 95%;
-  height: 25px;
+  height: 15px;
   border-radius: 5px;
   cursor: pointer;
   padding: 10px;
-  margin: 5px 0 20px 0;
+  margin: 5px 0 5px 0;
+}
+.checkbox-accept{
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  align-content: normal;
+  justify-content: normal;
+}
+.checkbox-text{
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.checkbox-text a{
+  color: #FFD146;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 @media(max-width: 915px){

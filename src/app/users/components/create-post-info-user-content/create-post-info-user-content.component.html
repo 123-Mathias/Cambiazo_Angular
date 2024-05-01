@@ -22,15 +22,15 @@
     <h3 class="subtitle">Pais</h3>
     <mat-form-field>
       <mat-select [(ngModel)]="selectedCountry" (selectionChange)="onCountrySelectionChange()">
-        <mat-option *ngFor="let country of countries" [value]='country.name'>{{country.name}}</mat-option>
+        <mat-option *ngFor="let country of countries" [value]='country.country'>{{country.country}}</mat-option>
       </mat-select>
     </mat-form-field>
 
-    <h3 class="subtitle">Estados</h3>
+    <h3 class="subtitle">Departamentos</h3>
     <mat-form-field>
-      <mat-select>
-        <mat-option *ngIf="!states || states.length === 0" [value]="null">No hay estados disponibles</mat-option>
-        <mat-option *ngFor="let state of states" [value]='state'>{{state}}</mat-option>
+      <mat-select [(ngModel)]="selectedDepartments" (selectionChange)="onCitiesSelectionChange()">
+        <mat-option *ngIf="!departments || departments.length === 0" [value]="null">No hay departamentos disponibles</mat-option>
+        <mat-option *ngFor="let department of departments" [value]='department.name'>{{department.name}}</mat-option>
       </mat-select>
     </mat-form-field>
 

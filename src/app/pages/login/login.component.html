@@ -19,19 +19,18 @@
         <p class="subtitle">o inicia sesión con correo</p>
         <div class="right"></div>
       </div>
-      <mat-form-field class="mat-form-field">
-        <mat-label><b>Usuario</b></mat-label>
-        <input matInput name="username" placeholder="Usuario" class="mat-input-element">
-      </mat-form-field>
+      <mat-label><b>Usuario</b></mat-label>
+      <input  name="username" placeholder="" class="mat-input-element">
 
-      <mat-form-field class="mat-form-field">
+      <div class="forgot-password">
         <mat-label><b>Contraseña</b></mat-label>
-        <input matInput type="password" placeholder="Contraseña" class="mat-input-element">
-      </mat-form-field>
+        <a class="remember-password" routerLink="/home"><b>¿No recuerdas la contraseña?</b></a>
+      </div>
+      <input  type="password" placeholder="" class="mat-input-element">
 
-      <button mat-button routerLink="/home" (click)="login()" class="button">Iniciar Sesión</button>
+      <button mat-button routerLink="/home" (click)="login()" class="button"><b>Iniciar Sesión</b></button>
 
-      <p class="register">¿No tienes una cuenta?<a routerLink="/home"> Crea tu cuenta</a></p>
+      <p class="register">¿No tienes una cuenta? <a routerLink="/register"> Crea tu cuenta</a></p>
 
     </form>
   </div>

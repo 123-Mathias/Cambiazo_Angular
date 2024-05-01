@@ -21,9 +21,22 @@
   margin-right: 8px;
 }
 
+/***************/
 
+::ng-deep .custom-chip {
+  background-color: #f0f0f0; /* Color de fondo del chip */
+  border-radius: 16px; /* Borde redondeado */
+  margin: 4px; /* Margen entre los chips */
+  font-size: 14px; /* Tamaño de fuente del chip */
+}
 
+::ng-deep .custom-chip:hover {
+  background-color: #ccc; /* Cambio de color de fondo al pasar el mouse sobre el chip */
+}
 
+::ng-deep .text-category {
+  padding: 0 8px; /* Espaciado interno del texto dentro del chip */
+}
 
 
 

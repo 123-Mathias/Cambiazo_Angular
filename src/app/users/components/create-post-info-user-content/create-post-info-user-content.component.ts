@@ -32,10 +32,11 @@ import {FormsModule} from "@angular/forms";
 export class CreatePostInfoUserContentComponent implements OnInit{
 
   countries: any[]= []
-  states: string[]=[]
+  departments: any[]=[]
   cities: string[]=[]
 
   selectedCountry: string = ''
+  selectedDepartments: string = ''
 
   constructor(private countriesService: CountriesService) {
 
@@ -48,53 +49,22 @@ export class CreatePostInfoUserContentComponent implements OnInit{
 
   getAllCountries(){
     this.countriesService.getCountries().subscribe((res:any)=>{
-
-        res.data.forEach((e: any) => {
-          this.countries.push({name: e.name})
-        })
-
+      this.countries = res
     })
 
-    this.getAllCities()
-    this.getAllStates()
-    console.log(this.countries)
-
   }
-
-    getAllCities() {
-      this.countriesService.getCities().subscribe((res: any) => {
-        res.data.forEach((object_api: any) => {
-          this.countries.map(obj_country => {
-            if (obj_country.name == object_api.country) {
-              obj_country.cities = object_api.cities
-            }
-          })
-        });
-      });
-    }
-
-  getAllStates() {
-    this.countriesService.getStates().subscribe((res: any) => {
-      res.data.forEach((object_api: any) => {
-        this.countries.map(obj_country => {
-          if (obj_country.name == object_api.name) {
-            obj_country.states = object_api.states.map((state:any)=> {return state[Object.keys(state)[0]]})
-            }
-         })
-
-      });
-    });
-  }
-
 
   onCountrySelectionChange(){
-    this.cities = ['']
-    this.states = ['']
-    const selectedCountryObj = this.countries.find(country => country.name === this.selectedCountry);
-    this.states = selectedCountryObj.states;
-    this.cities = selectedCountryObj.cities;
-  }
+    this.departments = ['']
+    const selectedCountryObj = this.countries.find(c => c.country === this.selectedCountry);
+    this.departments = selectedCountryObj.departments;
 
+  }
+  onCitiesSelectionChange(){
+    this.cities = ['']
+    const selectedDepartmentObj = this.departments.find(c => c.name === this.selectedDepartments);
+    this.cities = selectedDepartmentObj.cities;
+  }
 
 
 }

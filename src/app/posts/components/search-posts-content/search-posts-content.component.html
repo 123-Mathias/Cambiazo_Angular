@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="search-posts-content.component.css">
 <div class="container-search">
 <mat-form-field class="form-content">
   <div class="search-wrapper">
@@ -7,5 +8,7 @@
 </mat-form-field>
 </div>
 <div class="container-categories">
-
+  <mat-chip-set aria-label="Fish selection" >
+    <mat-chip [color]="color" class='chip-category' *ngFor="let category of categories">{{category.name}}</mat-chip>
+  </mat-chip-set>
 </div>

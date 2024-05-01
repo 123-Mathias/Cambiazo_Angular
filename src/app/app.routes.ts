@@ -8,6 +8,7 @@ import {ContactComponent} from "./pages/contact/contact.component";
 import {DonationsComponent} from "./pages/donations/donations.component";
 import {PostComponent} from "./pages/post/post.component";
 import {LoginComponent} from "./pages/login/login.component";
+import {RegisterComponent} from "./pages/register/register.component";
 
 export const routes: Routes = [
   {path:'home',component: HomeComponent},
@@ -18,8 +19,10 @@ export const routes: Routes = [
   {path:'memberships', component:MembershipsComponent},
   {path:'donations',component: DonationsComponent},
   {path:'login',component: LoginComponent },
+  {path:'register',component: RegisterComponent },
   {path:'home/post',component:PostComponent},
-
   {path:'',pathMatch:'full',redirectTo:'home'},
   {path:'**',pathMatch:'full',redirectTo:'home'}
+
 ];
+
