@@ -6,7 +6,7 @@
   <mat-card *ngIf="item.boost == true">
       <div class="image" [style.background-image]="'url(' + item.images[0] + ')'"></div>
       <div class="info-card">
-        <p class="location">{{item.contact_information.district}}</p>
+        <p class="location"><mat-icon style="color: #FFD146">place</mat-icon>{{item.contact_information.district}}</p>
         <mat-card-header>
           <div class="container-titles">
           <mat-card-title>{{item.product_name}}</mat-card-title>

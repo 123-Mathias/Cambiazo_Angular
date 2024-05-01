@@ -6,7 +6,7 @@ import {MatIcon} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatButton} from "@angular/material/button";
 import {OngsService} from "../../services/ongs.service";
-
+import {CategoriesOngs} from "../../models/categories-ongs/categories-ongs.model";
 @Component({
   selector: 'app-filter-ongs',
   standalone: true,
@@ -27,7 +27,7 @@ import {OngsService} from "../../services/ongs.service";
 
 export class FilterOngsComponent implements OnInit {
 
-  categories:any[]=[];
+  categories:CategoriesOngs[]=[];
    toppings: any= FormGroup;
 
   constructor(private _formBuilder: FormBuilder,private ongsService: OngsService) {

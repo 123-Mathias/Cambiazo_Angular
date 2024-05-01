@@ -3,7 +3,7 @@
   <p class="p-1">¡Sé parte de nuestra comunidad premium</p>
   <p class="p-2">y obten beneficios exclusivos para ti!</p>
 <div class="container-memberships">
-  <mat-card *ngFor="let item of items; let i = index" [ngClass]="{'background-white': i % 2 === 0, 'background-primary': i % 2 !== 0}">
+  <mat-card *ngFor="let item of memberships; let i = index" [ngClass]="{'background-white': i % 2 === 0, 'background-primary': i % 2 !== 0}">
     <mat-card-header>
       <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
       <mat-card-title>

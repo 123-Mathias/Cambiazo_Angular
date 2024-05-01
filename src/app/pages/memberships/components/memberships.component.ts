@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MatCardModule} from "@angular/material/card";
 import {NgClass, NgForOf} from "@angular/common";
-import {HttpClient} from "@angular/common/http";
 import {MembershipsService} from "../services/memberships.service";
+import {Memberships} from "../models/memberships.model";
 
 @Component({
   selector: 'app-memberships',
@@ -17,7 +17,7 @@ import {MembershipsService} from "../services/memberships.service";
 })
 export class MembershipsComponent implements OnInit{
 
-  items: any[] = []
+  memberships: Memberships[] = []
 
   constructor(private membershipsService:MembershipsService) {
   }
@@ -30,7 +30,7 @@ export class MembershipsComponent implements OnInit{
   getMemberAllMemberships() {
     this.membershipsService.getMemberShips().subscribe(
       (res:any)=> {
-        this.items = res
+        this.memberships = res
       },error => console.log(error)
     )
   }

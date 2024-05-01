@@ -6,7 +6,7 @@ import {MatCardModule} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
 import {MatButton} from "@angular/material/button";
 import {OngsService} from "../../services/ongs.service";
-
+import {Ongs} from "../../models/ongs/ongs.model";
 @Component({
   selector: 'app-search-ongs',
   standalone: true,
@@ -23,7 +23,7 @@ import {OngsService} from "../../services/ongs.service";
 })
 export class SearchOngsComponent implements OnInit{
 
-  items:any[]=[]
+  items:Ongs[]=[]
 
   constructor(private ongsService:OngsService) {
   }

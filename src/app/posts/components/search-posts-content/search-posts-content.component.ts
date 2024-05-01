@@ -6,7 +6,7 @@ import {PostsService} from "../../services/posts.service";
 import {NgForOf} from "@angular/common";
 import {ThemePalette} from "@angular/material/core";
 import {MatButton} from "@angular/material/button";
-
+import {CategoriesObjects} from "../../models/categories-objects/categories-objects.model";
 @Component({
   selector: 'app-search-posts-content',
   standalone: true,
@@ -17,7 +17,8 @@ import {MatButton} from "@angular/material/button";
 export class SearchPostsContentComponent implements OnInit{
 
   color: ThemePalette
-  categories: any[] = [];
+  categories: CategoriesObjects[] = [];
+
   constructor(private postsService:PostsService) {
   }
 

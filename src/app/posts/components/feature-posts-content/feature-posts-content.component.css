@@ -56,9 +56,13 @@ mat-card{
 }
 
 .location{
+  display:flex;
+  justify-content: end;
+  align-content: center;
   text-align: right;
   margin-right:15px;
   margin-top:10px;
+  font-weight: bold;
 }
 mat-card-header{
   position: relative;

@@ -21,6 +21,7 @@ export const routes: Routes = [
   {path:'login',component: LoginComponent },
   {path:'register',component: RegisterComponent },
   {path:'home/post',component:PostComponent},
+
   {path:'',pathMatch:'full',redirectTo:'home'},
   {path:'**',pathMatch:'full',redirectTo:'home'}
 

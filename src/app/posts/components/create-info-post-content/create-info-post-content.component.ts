@@ -6,7 +6,7 @@ import {MatOption, MatSelect} from "@angular/material/select";
 import {MatSlideToggle} from "@angular/material/slide-toggle";
 import {NgForOf} from "@angular/common";
 import {PostsService} from "../../services/posts.service";
-
+import {CategoriesObjects} from "../../models/categories-objects/categories-objects.model";
 @Component({
   selector: 'app-create-info-post-content',
   standalone: true,
@@ -24,7 +24,7 @@ import {PostsService} from "../../services/posts.service";
 })
 export class CreateInfoPostContentComponent implements OnInit{
 
-  categories: any[]=[]
+  categories: CategoriesObjects[]=[]
 
   constructor(private postService:PostsService) {
   }

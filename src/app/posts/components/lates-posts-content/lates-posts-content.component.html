@@ -6,7 +6,8 @@
     <div class="container-post-image">
     <img mat-card-image src='{{item.images[0]}}' alt="Photo Product">
     </div>
-    <h3>Ubicacion</h3>
+
+    <div class="location"><mat-icon style="color: #FFD146">place</mat-icon>{{item.contact_information.district}}</div>
     <mat-card-header>
       <mat-card-title>{{item.product_name}}</mat-card-title>
       <mat-card-subtitle>{{item.category.name}}</mat-card-subtitle>

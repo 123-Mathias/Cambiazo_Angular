@@ -40,6 +40,15 @@ section h1{
   margin-left: 1rem;
 }
 
+.button-submit{
+  justify-self: center;
+  background: #FFD146;
+  border-radius: 20px;
+  width: 40%;
+  margin:2rem 0 2rem 0;
+}
+
+
 @media (max-width: 900px){
 
   .container-create-post{

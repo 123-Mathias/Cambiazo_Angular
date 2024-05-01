@@ -3,20 +3,22 @@ import {MatCardModule} from "@angular/material/card";
 import { CommonModule } from '@angular/common';
 import {FeaturePostsContentComponent} from "../feature-posts-content/feature-posts-content.component";
 import {PostsService} from "../../services/posts.service";
-
+import {MatIcon} from "@angular/material/icon";
+import {Products} from "../../models/products/products.model";
 @Component({
   selector: 'app-lates-posts-content',
   standalone: true,
   imports: [
     MatCardModule,
     CommonModule,
-    FeaturePostsContentComponent
+    FeaturePostsContentComponent,
+    MatIcon
   ],
   templateUrl: './lates-posts-content.component.html',
   styleUrl: './lates-posts-content.component.css'
 })
 export class LatesPostsContentComponent implements OnInit{
-  items:any[]= []
+  items:Products[]= []
 
   constructor(private postPervice:PostsService) {
   }
