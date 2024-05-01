@@ -1,22 +1,27 @@
 
 <div class="container-slider">
 <div class="container-cards" *ngFor="let i of [1,2]">
-  <mat-card *ngFor="let item of items" >
-    <div class="image" [style.background-image]="'url(https://material.angular.io/assets/img/examples/shiba' + item + '.jpg)'">
-    </div>
-    <div class="info-card">
-      <p class="location">Ubicacion</p>
-      <mat-card-header>
-        <mat-card-title>objetos</mat-card-title>
-        <mat-card-subtitle>
-          <button>Category</button>
-        </mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-      <p class="p-info">Intercambio por unas</p>
-      <p class="p-price">S/ valor aprox.</p>
-    </mat-card-content>
-    </div>
+  <ng-container *ngFor="let item of items">
+
+  <mat-card *ngIf="item.boost == true">
+      <div class="image" [style.background-image]="'url(' + item.images[0] + ')'"></div>
+      <div class="info-card">
+        <p class="location">{{item.contact_information.district}}</p>
+        <mat-card-header>
+          <div class="container-titles">
+          <mat-card-title>{{item.product_name}}</mat-card-title>
+          <mat-card-subtitle>
+            <button >{{item.category.name}}</button>
+          </mat-card-subtitle>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="p-info">{{item.change_for}}</p>
+          <p class="p-price">S/{{item.price}} valor aprox.</p>
+        </mat-card-content>
+      </div>
   </mat-card>
+  </ng-container>
+
 </div>
 </div>

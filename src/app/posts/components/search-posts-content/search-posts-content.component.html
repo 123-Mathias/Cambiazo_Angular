@@ -8,7 +8,7 @@
 </mat-form-field>
 </div>
 <div class="container-categories">
-  <mat-chip-set aria-label="Fish selection" >
-    <mat-chip [color]="color" class='chip-category' *ngFor="let category of categories">{{category.name}}</mat-chip>
-  </mat-chip-set>
+  <div class="box-categories">
+    <button mat-button class='chip-category' *ngFor="let category of categories">{{category.name}}</button>
+  </div>
 </div>

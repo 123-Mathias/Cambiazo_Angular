@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {Router, RouterModule} from "@angular/router";
+import {MatMenu, MatMenuTrigger} from "@angular/material/menu";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-header-content',
@@ -9,7 +11,10 @@ import {Router, RouterModule} from "@angular/router";
   imports: [
     MatToolbarModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    MatMenu,
+    MatIcon,
+    MatMenuTrigger
 
   ],
   templateUrl: './header-content.component.html',

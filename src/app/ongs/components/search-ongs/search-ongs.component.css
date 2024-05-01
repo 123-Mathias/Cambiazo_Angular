@@ -1,13 +1,13 @@
 .container{
   font-family: 'Montserrat', sans-serif;
-
 }
 
-mat-card,mat-cad-actions,mat-card-header,mat-cardtitle,mat-card-subtitle,p{
+mat-card,mat-card-header,mat-cardtitle,mat-card-subtitle,p{
   font-family: inherit;
 }
 
 .form-content{
+
   width:100%;
   justify-content: center;
   overflow: hidden;
@@ -24,7 +24,12 @@ mat-card,mat-cad-actions,mat-card-header,mat-cardtitle,mat-card-subtitle,p{
 
 
 /******************/
-
+mat-card-header{
+  padding:0;
+}
+mat-card-title, mat-card-subtitle{
+  margin: 0;
+}
 mat-card{
   display: flex;
   flex-direction: row;
@@ -32,13 +37,16 @@ mat-card{
   border:solid 2px rgb(0,0,0,0.1);
   box-shadow: none;
   font-family: inherit;
+  padding:0.5rem;
+
+  align-items: center;
+
 }
 
 mat-card:not(last-of-type){
   margin-bottom: 2rem;
 }
 mat-card img{
-  margin: 1rem;
   height: 5rem;
   border-radius: 15px;
 }
@@ -46,24 +54,32 @@ mat-card img{
 mat-card-header{
   display: flex;
   flex-direction: column;
-  width: 67%;
   justify-content: center;
   font-family: inherit;
 }
 
 mat-card-header p{
-  display: none;
+  margin: 0.5rem 0 0 1rem;
+  font-family: inherit;
+
 }
 mat-card-subtitle{
   font-size: 1rem;
   font-family: inherit;
+  margin-left: 1rem;
+
 }
 
 mat-card-title{
+
   line-height: 1.2rem;
   font-family: inherit;
   font-weight: bold;
+  margin-left: 1rem;
+
 }
+
+/*
 mat-card-actions{
   display: flex;
   flex-direction: column;
@@ -75,10 +91,9 @@ mat-card-actions button{
   background-color: #FFD146;
   width: 100%;
 }
-
+*/
 @media (max-width: 500px){
   mat-card-header{
-    width: 100%;
     padding-left:0;
   }
 
