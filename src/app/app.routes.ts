@@ -22,7 +22,7 @@ export const routes: Routes = [
   {path:'register',component: RegisterComponent },
   {path:'home/post',component:PostComponent},
 
-  {path:'/',pathMatch:'full',redirectTo:'home'},
+  {path:'',pathMatch:'full',redirectTo:'home'},
   {path:'**',pathMatch:'full',redirectTo:'home'}
 
 ];
